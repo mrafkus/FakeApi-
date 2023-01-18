@@ -1,5 +1,5 @@
 import "./App.css";
-import { Footer, Login, Navbar, Products } from "./components";
+import { Footer, Login, Navbar, Products, Users } from "./components";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return <div className="App">
     <Navbar />
-    {token ? <Products /> : <Login token={token} setToken={setToken}/>}
+    {token ? <Users /> : <Login token={token} setToken={setToken}/>}
     <Footer />
   </div>;
 }
